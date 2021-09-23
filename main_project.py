@@ -96,7 +96,7 @@ def open_browser():
 def create_app_ui():
     main_layout = html.Div(
     [
-    html.H1(id='Main_title', children = "Sentiment Analysis with Insights",style={'text-align':'center'}),
+    html.H1(id='Main_title', children = "Sentiment Analysis with Insights",style={'text-align':'center','background-color':'#00FFFF'}),
     html.Hr(style={'background-color':'black'}),
     html.H2(children = "Pie Chart",style = {'text-align':'center','text-decoration':'underline'}),
     html.P([html.Img(src=app.get_asset_url('sentiment.png'),style={'width':'700px','height':'400px'})],style={'text-align':'center'}),
@@ -104,19 +104,19 @@ def create_app_ui():
     html.H2(children = "WordCloud",style = {'text-align':'center','text-decoration':'underline'}),
     html.P([html.Img(src=app.get_asset_url('wordCloud.png'),style={'width':'700px','height':'400px'})],style={'text-align':'center'}),
     html.Hr(style={'background-color':'black'}),
-    html.H2(children = "Select a Review",style = {'text-align':'center','text-decoration':'underline'}),
+    html.H2(children = "Select a Review",style = {'text-align':'center','text-decoration':'underline','background-color':'#ff6347'}),
     dcc.Dropdown(
                 id='Chart_Dropdown', 
                   options=chart_dropdown_values,
-                  placeholder = 'Select a Review',style={'font-size':'22px','height':'70px'}
+                  placeholder = 'Select a Review',style={'font-size':'22px','height':'70px','background-color':'#ffffe0'}
                     ),
     html.H1(children = 'Missing',id='sentiment1',style={'text-align':'center'}),
     html.Hr(style={'background-color':'black'}),
-    html.H2(children = "Find Sentiment of Your Review",style = {'text-align':'center','text-decoration':'underline'}),
+    html.H2(children = "Find Sentiment of Your Review",style = {'text-align':'center','text-decoration':'underline','background-color':'#ff6347'}),
     dcc.Textarea(
         id = 'textarea_review',
         placeholder = 'Enter the review here.....',
-        style = {'width':'100%', 'height':150,'font-size':'22px'}
+        style = {'width':'100%', 'height':150,'font-size':'22px','background-color':'#ffffe0'}
         ),
     
     dbc.Button(
